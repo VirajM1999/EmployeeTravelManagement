@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color and set up flexbox for the main layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f2f2f2, #c6c6c6);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+.main-header {
+    width: 100%;
+    background: #00006a;
+    padding: 0px 8px;
+    padding-bottom: 4px;
+    
+}
+.left
+{
+	display: flex;
+	gap:1rem;
+	align-items: center;
+	
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+}
+
+.left ul li
+{
+	list-style: none;
+	color: white;
+}
+.main-header__brand {
+    text-decoration: none;
+    color: #0000ff;
+    font-weight: bolder;
+}
+.main-nav__items {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.main-nav__item {
+    /* display: inline-block; */
+    margin: 0 10px;
+    margin-top: 0px;
+}
+.main-nav__item a {
+    text-decoration: none;
+    color: aqua-blue;
+    font-weight: bold;
+    padding: 3px 0px;
+}
+
+.main-nav__item__cta a {
+  color: #007BFF;/* Adjust  button text color */
+    background-color: #fff; /* Change button background to white */
+    padding: 3px 10px;  /* Smaller padding for smaller button */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+.main-nav__item__cta a:hover {
+    background-color: #e6e6e6; /* Light grey for hover effect */
+}
+
+.main-header > div {
+    display: inline-block;
+    
+}
+
+.logo {
+    width:57px;
+    height: 47px;
+    border-radius: 10px;
+    margin-top: 7px;
+}
+span {
+    width:57px;
+    height: 30px;
+    margin-top: 1px;
+ color: white;
+}
+
+.main-nav {
+    display: flex;
+  /*   text-align: right; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.table-section {
+    margin: 20px 0;
+    width: 100%; /* Ensure tables take full width */
+}
+
+.table-section + .table-section {
+    margin-top: 40px; /* Add extra space between tables */
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9em;
+    min-width: 600px;
+    width: 100%; /* Make sure the table takes full width of the container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.styled-table thead tr {
+    background-color: #007BFF; /* Change green shade to blue */
+    color: #ffffff;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #007BFF; /* Change green shade to blue */
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #007BFF; /* Change green shade to blue */
+}
+
+.booking-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.booking-link:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #000077;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: flex;
+    width: 105%;
+    bottom: 0;
+}
+
+.main-footer nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-footer li {
+    margin-right: 20px;
+}
+
+.main-footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer a:hover {
+    color: #4CAF50;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-header .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-header .logo {
+        margin-bottom: 10px;
+    }
+
+    .main-header ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-header li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .main-footer nav {
+        padding: 0 10px;
+    }
+
+    .main-footer ul {
+        flex-direction: column;
+    }
+
+    .main-footer li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
